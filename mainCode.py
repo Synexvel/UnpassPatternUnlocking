@@ -106,14 +106,14 @@ def main():
 
     # check parameters
     if len(sys.argv) != 2:
-        sys.stdout = open("logs.txt","a")
+        sys.stdout = open("result.txt","w")
         print('[+] Usage: %s /path/to/gesture.key\n' % sys.argv[0])
         sys.exit(0)
         sys.stdout.close()
 
     # check gesture.key file
     if not os.path.isfile(sys.argv[1]):
-        sys.stdout = open("logs.txt","a")
+        sys.stdout = open("result.txt","w")
         print("[!] ERROR")
         print("[e] Cannot access to %s file\n" % sys.argv[1])
         print("[!] Make sure you save the gesture file along with the script folder(!)")
@@ -127,7 +127,7 @@ def main():
 
     # check hash length
     if len(gest) / 2 != hashlib.sha1().digest_size:
-        sys.stdout = open("logs.txt","a")
+        sys.stdout = open("result.txt","w")
         print("[!] ERROR")
         print("[e] Invalid gesture file?\n")
         sys.exit(-2)
@@ -139,13 +139,13 @@ def main():
     t1 = time.time()
 
     if pattern is None:
-        sys.stdout = open("logs.txt","a")
+        sys.stdout = open("result.txt","w")
         print(" ")
         print("[!] The pattern was not found...")
         rcode = -1
         sys.stdout.close()
     else:
-        sys.stdout = open("logs.txt","a")
+        sys.stdout = open("result.txt","w")
         print(" ")
         print("[*] The pattern has been FOUND!!! => %s\n" % pattern)
         show_pattern(pattern)

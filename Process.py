@@ -13,7 +13,7 @@ heading.pack()
 
 #function
 def open_txt():
-    f = open("logs.txt", 'r')
+    f = open("result.txt", 'r')
     temp = f.read(350)
     Information.insert(END, temp)
     f.close()

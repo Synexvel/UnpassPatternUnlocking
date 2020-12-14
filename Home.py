@@ -3,6 +3,7 @@ from tkinter.filedialog import askopenfilename
 import sys
 import os
 import tkinter
+from mainCode import * 
 
 def save_info():
     DeviceName_info = Device.get()
@@ -10,15 +11,23 @@ def save_info():
     Version_info = c.get()
     #print(DeviceName_info, Description_info)
 
-    file = open("logs.txt", "w")
+    file1 = open("logs1.txt", "w")
     space = str("\n")
-    file.write("Device Name  :" + DeviceName_info )
-    file.write(space)
-    file.write("Description  :" + Description_info)
-    file.write(space)
-    file.write("Version  :" + Version_info)
-    file.write(space)
-    file.close()
+    file1.write("Device Name  :" + DeviceName_info )
+    file1.write(space)
+    file1.write("Description  :" + Description_info)
+    file1.write(space)
+    file1.write("Version  :" + Version_info)
+    file1.write(space)
+    file1.close()
+   
+    filenames = ['logs1.txt','result.txt']
+    outfile =  open('log.txt', 'w')
+    for fname in filenames:
+            infile =  open(fname)
+            outfile.write(infile.read())
+    outfile.close()
+            
 
     #Device_entry.delete(0, END)
     #Description_entry.delete(0, END)

@@ -1,4 +1,6 @@
-
+Device Name  :cxvxcvxc
+Description  :fdgdfg
+Version  :Lolipop
  
 [*] The pattern has been FOUND!!! => 210345876
 
@@ -14,5 +16,4 @@
   | 9 |  | 8 |  | 7 |  
   -----  -----  -----
 
-It took: 5.8391 seconds
-
+It took: 8.5415 seconds
