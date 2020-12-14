@@ -13,4 +13,4 @@
   | 9 |  | 8 |  | 7 |  
   -----  -----  -----
 
-It took: 8.5415 seconds
+It took: 4.6904 seconds

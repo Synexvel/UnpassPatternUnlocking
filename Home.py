@@ -22,7 +22,7 @@ def save_info():
     file1.close()
    
     filenames = ['logs1.txt','result.txt']
-    outfile =  open('log.txt', 'w')
+    outfile =  open('logs.txt', 'w')
     for fname in filenames:
             infile =  open(fname)
             outfile.write(infile.read())
