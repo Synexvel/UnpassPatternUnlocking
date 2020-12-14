@@ -11,7 +11,7 @@ def save_info():
     Version_info = c.get()
     #print(DeviceName_info, Description_info)
 
-    file1 = open("logs1.txt", "w")
+    file1 = open("information.txt", "w")
     space = str("\n")
     file1.write("Device Name  :" + DeviceName_info )
     file1.write(space)
@@ -21,7 +21,7 @@ def save_info():
     file1.write(space)
     file1.close()
    
-    filenames = ['logs1.txt','result.txt']
+    filenames = ['information.txt','result.txt']
     outfile =  open('logs.txt', 'w')
     for fname in filenames:
             infile =  open(fname)
